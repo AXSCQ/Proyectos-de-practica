@@ -1,0 +1,32 @@
+#news-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.news-item {
+    border: 1px solid #ccc;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.news-item h2 {
+    margin: 0 0 10px 0;
+}
+
+.news-item p {
+    margin: 0 0 10px 0;
+}
+.news-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+@media (max-width: 600px) {
+    #news-container {
+        flex-direction: column;
+    }
+    .news-item {
+        margin: 10px;
+    }
+}

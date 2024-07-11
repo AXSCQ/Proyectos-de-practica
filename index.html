@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página de Noticias</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <h1>Noticias Recientes</h1>
+    <div id="news-container"></div>
+    <script src="js/script.js"></script>
+    <script>
+        const newsItem = document.createElement('div');
+        newsItem.innerHTML = `
+            <img src="${article.urlToImage}" alt="Imagen de noticia">
+            <h2>${article.title}</h2>
+            <p>${article.description}</p>
+            <a href="${article.url}" target="_blank">Leer más</a>
+        `;
+        document.getElementById('news-container').appendChild(newsItem);
+    </script>
+</body>
+</html>
