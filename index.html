@@ -1,127 +1,161 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Servicios de Traducción</title>
-    <link rel="stylesheet" href="css/style.css">
+    <title>Mi Pastelería</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.5.0/font/bootstrap-icons.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link href="css/style.css" rel="stylesheet">
 </head>
 <body>
-    <!-- Header -->
-    <header>
-        <img src="images/logo.Jpeg" alt="Logo de la empresa">
-        <nav>
-            <ul>
-                <li><a href="#hero">Inicio</a></li>
-                <li><a href="#servicios">Servicios</a></li>
-                <li><a href="#sobre-nosotros">Sobre Nosotros</a></li>
-                <li><a href="#precios">Precios</a></li>
-                <li><a href="#contacto">Contacto</a></li>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+        <a class="navbar-brand" href="#"><img src="images/Logo.png" alt="Logo" height="30"></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Inicio <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#about">Acerca de</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#services">Servicios</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#products">Productos</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#contact">Contacto</a>
+                </li>
             </ul>
-        </nav>
-        <button>Solicitar una Cotización</button>
+        </div>
+    </nav>
+
+    <!-- Header -->
+    <header class="jumbotron text-center" style="background-image: url('images/Fondo.jpeg'); background-size: cover; color: white; margin-top: 56px; position: relative;">
+        <div class="overlay"></div>
+        <div class="container">
+            <h1 class="display-4">Bienvenidos a Mi Pastelería</h1>
+            <p class="lead">Delicias hechas con amor y dedicación</p>
+            <a href="#services" class="btn btn-primary btn-lg">Ver Servicios</a>
+        </div>
     </header>
 
-    <!-- Hero Section -->
-    <section id="hero">
-        <h1>Servicios de Traducción Profesional</h1>
-        <p>Traducciones precisas y rápidas en múltiples idiomas</p>
-        <button>Solicitar una Cotización</button>
+    <!-- About Section -->
+    <section id="about" class="container my-5">
+        <div class="row">
+            <div class="col">
+                <div class="card shadow-sm p-3 mb-5 bg-white rounded border-0 text-center">
+                    <h2 class="section-title">Acerca de</h2>
+                    <p>Somos una pastelería dedicada a ofrecer los mejores productos elaborados con ingredientes de la más alta calidad. Nos enorgullece ofrecer una amplia variedad de panes, tortas y delicias de chocolate que deleitan a nuestros clientes. Nuestro equipo de expertos pasteleros trabaja con pasión y dedicación para crear sabores únicos y presentaciones impecables.</p>
+                </div>
+            </div>
+        </div>
     </section>
 
-    <!-- Servicios Section -->
-    <section id="servicios">
-        <h2>Nuestros Servicios</h2>
-        <div class="servicio">
-            <img src="/images/Servicio.jpeg" alt="Icono del servicio">
-            <h3>Servicio de Traducciones</h3>
-            <p> facilitamos procesos como los trámites del extranjero, contratos de trabajo, 
-            estudio, etc.</p>
+    <!-- Services Section -->
+    <section id="services" class="container my-5 text-center">
+        <h2 class="section-title">Nuestros Servicios</h2>
+        <div class="row">
+            <div class="col-lg-4">
+                <div class="card shadow-sm p-3 mb-5 bg-white rounded border-0">
+                    <img src="images/Panes.jpeg" class="img-fluid card-img-top rounded" alt="Panes">
+                    <div class="card-body">
+                        <h3 class="card-title"><i class="bi bi-basket-fill"></i> Panes Artesanales</h3>
+                        <p class="card-text">Deliciosos panes recién horneados con ingredientes frescos.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="card shadow-sm p-3 mb-5 bg-white rounded border-0">
+                    <img src="images/Fresa.jpeg" class="img-fluid card-img-top rounded" alt="Fresa">
+                    <div class="card-body">
+                        <h3 class="card-title"><i class="bi bi-cupcake"></i> Tortas Personalizadas</h3>
+                        <p class="card-text">Pasteles bellamente decorados para cada ocasión.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="card shadow-sm p-3 mb-5 bg-white rounded border-0">
+                    <img src="images/Pastelchocolate.jpeg" class="img-fluid card-img-top rounded" alt="Pastel de Chocolate">
+                    <div class="card-body">
+                        <h3 class="card-title"><i class="bi bi-droplet-half"></i> Delicias de Chocolate</h3>
+                        <p class="card-text">Exquisitos postres de chocolate para los amantes del cacao.</p>
+                    </div>
+                </div>
+            </div>
         </div>
-        <!-- Añadir más servicios aquí -->
     </section>
 
-    <!-- Sobre Nosotros Section -->
-    <section id="sobre-nosotros">
-        <h2>Sobre Nosotros</h2>
-        <div class="equipo">
-            <img src="/images/Persona.jpeg" alt="Miembro del equipo">
-            <p>Carlos - coordinador</p>
-        </div>
-        <!-- Añadir más miembros del equipo aquí -->
-    </section>
 
-   <!-- Sección de Comentarios como Testimonios -->
-<section id="comentarios">
-    <h2>Comentarios de Nuestros Clientes</h2>
-    <div class="comentario">
-        <img src="/images/Diego.jpeg" alt="Persona 1">
-        <div class="texto-comentario">
-            <p class="nombre">Diego</p>
-            <p>"Este es un comentario de ejemplo que cuenta como testimonio de nuestro servicio."</p>
+    <!-- Contact Section -->
+    <section id="contact" class="container my-5">
+        <div class="row">
+            <div class="col-lg-6">
+                <div class="card shadow-sm p-3 mb-5 bg-white rounded border-0">
+                    <h2 class="section-title">Contacto</h2>
+                    <p>Puedes encontrarnos en:</p>
+                    <p>123 Calle Principal, Ciudad, País</p>
+                    <p>Email: contacto@ejemplo.com</p>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="card shadow-sm p-3 mb-5 bg-white rounded border-0">
+                    <h2 class="section-title">Envíanos un mensaje</h2>
+                    <form>
+                        <div class="form-group">
+                            <label for="name">Nombre</label>
+                            <input type="text" class="form-control" id="name" placeholder="Tu nombre">
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" class="form-control" id="email" placeholder="Tu email">
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Mensaje</label>
+                            <textarea class="form-control" id="message" rows="4" placeholder="Tu mensaje"></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Enviar</button>
+                    </form>
+                </div>
+            </div>
         </div>
-    </div>
-    <!-- Añadir más comentarios aquí -->
-    <div class="comentario">
-        <img src="/images/Paola.jpeg" alt="Persona 2">
-        <div class="texto-comentario">
-            <p class="nombre">Paola</p>
-            <p>"La calidad del servicio fue excepcional y el tiempo de entrega fue sorprendentemente rápido."</p>
-        </div>
-    </div>
-    <div class="comentario">
-        <img src="/images/Sara.jpeg" alt="Persona 3">
-        <div class="texto-comentario">
-            <p class="nombre">Sara</p>
-            <p>"Gracias al equipo por su atención al detalle y por superar nuestras expectativas."</p>
-        </div>
-    </div>
-</section>
-
-    <!-- Proceso Section -->
-    <section id="proceso">
-        <h2>Nuestro Proceso</h2>
-        <ol>
-            <li>Recopilación de información.</li>
-            <li>Traducción y revisión.</li>
-            <li>Entrega final.</li>
-        </ol>
-    </section>
-
-    <!-- Precios Section -->
-    <section id="precios">
-        <h2>Nuestros Precios</h2>
-       <div class="plan">
-    <h3>Plan Especial</h3>
-    <p>500 hojas a tan solo $200</p>
-    <p>Este plan es ideal para proyectos grandes que requieren atención detallada y un tiempo de entrega rápido.</p>
-    <button>Seleccionar Plan</button>
-</div>
-        <!-- Añadir más planes aquí -->
-    </section>
-
-    <!-- Contacto Section -->
-    <section id="contacto">
-        <h2>Contacto</h2>
-        <form>
-            <input type="text" name="nombre" placeholder="Tu Nombre">
-            <input type="email" name="email" placeholder="Tu Email">
-            <textarea name="mensaje" rows="5" placeholder="Tu Mensaje"></textarea>
-            <button>Enviar Mensaje</button>
-        </form>
     </section>
 
     <!-- Footer -->
-   <footer>
-    <p>Síguenos en nuestras redes sociales:</p>
-    <nav>
-        <ul>
-            <li><a href="https://facebook.com">Facebook</a></li>
-            <li><a href="https://twitter.com">Twitter</a></li>
-            <li><a href="https://instagram.com">Instagram</a></li>
-        </ul>
-    </nav>
-    <p>&copy; 2024 Servicios de Traducción. Todos los derechos reservados.</p>
-</footer>
+    <footer class="text-center bg-light py-4 position-relative">
+        <div class="wave" style="height: 150px; overflow: hidden;">
+            <svg viewBox="0 0 500 150" preserveAspectRatio="none" style="height: 100%; width: 100%;">
+                <path d="M0.00,49.98 C150.00,150.00 349.69,-49.98 500.00,49.98 L500.00,150.00 L0.00,150.00 Z" style="stroke: none; fill: #f8f9fa;"></path>
+            </svg>
+        </div>
+        <div class="container mt-5">
+            <p>&copy; 2024 Mi Pastelería. Todos los derechos reservados.</p>
+            <div>
+                <a href="https://www.facebook.com" target="_blank" class="mx-2"><i class="bi bi-facebook"></i> Facebook</a>
+                <a href="https://www.twitter.com" target="_blank" class="mx-2"><i class="bi bi-twitter"></i> Twitter</a>
+                <a href="https://www.instagram.com" target="_blank" class="mx-2"><i class="bi bi-instagram"></i> Instagram</a>
+            </div>
+            <div>
+                <a href="https://www.google.com/maps/place/Plaza+de+Armas" target="_blank"><i class="bi bi-geo-alt"></i> Google Maps</a>
+            </div>
+            <img src="images/Cop.jpeg" alt="Footer Image" class="img-fluid mt-3">
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <!-- Custom JS -->
+    <script src="js/script.js"></script>
 </body>
 </html>
