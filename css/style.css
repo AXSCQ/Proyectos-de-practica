@@ -1,32 +1,377 @@
-#news-container {
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body */
+body {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+    color: #333;
+}
+
+/* Header */
+/* Encabezado */
+/* Estilo del encabezado */
+header {
     display: flex;
-    flex-direction: column;
-    gap: 20px;
-}
-
-.news-item {
-    border: 1px solid #ccc;
-    padding: 10px;
-    border-radius: 5px;
-}
-
-.news-item h2 {
-    margin: 0 0 10px 0;
-}
-
-.news-item p {
-    margin: 0 0 10px 0;
-}
-.news-item img {
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.1rem; /* Corrige la coma en el valor del relleno */
+    background-color: #2c3e50; /* Cambia el color de fondo a un tono más cálido */
+    color: #ecf0f1; /* Cambia el color del texto a blanco */
+    position: fixed;
     width: 100%;
-    height: auto;
+    top: 0;
+    z-index: 1000;
+}
+
+/* Estilo del logo */
+header .logo {
+    width: 50px; /* Ajusta el tamaño del logo */
+    height: 50px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+header .logo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+header .logo:hover {
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+}
+
+/* Estilo de la navegación */
+nav {
+    display: flex;
+    align-items: center;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    margin-left: 10px;
+}
+
+nav ul li {
+    margin-right: 10px;
+}
+
+nav ul li a {
+    color: #ecf0f1;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Estilo de las secciones */
+#hero,
+#servicios,
+#sobre-nosotros,
+#precios,
+#contacto {
+    margin-left: 100px;
+}
+
+/* Estilo de los botones */
+button {
+    background-color: #444; /* Cambia el color de fondo de los botones */
+    color: #ecf0f1;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    font-size: 14px;
+    border-radius: 3px;
+}
+
+button:hover {
+    background-color: #333; /* Cambia el color de fondo al pasar el cursor */
+}
+
+
+/* Hero Section */
+#hero {
+    background: url('../images/Oficina.jpg') no-repeat center center/cover;
+    color: white;
+    text-align: center;
+    padding: 100px 20px;
+    margin-top: 80px;
+}
+
+#hero h1 {
+    font-size: 3em;
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+#hero p {
+    font-size: 1.5em;
+    margin-bottom: 20px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+#hero button {
+    font-size: 1.2em;
+}
+
+/* Servicios Section */
+#servicios {
+    padding: 50px 20px;
+    text-align: center;
+}
+
+#servicios h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+#servicios .servicio {
+    display: inline-block;
+    width: 30%;
+    margin: 10px;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#servicios .servicio img {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 10px;
+}
+
+#servicios .servicio h3 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+/* Sobre Nosotros Section */
+#sobre-nosotros {
+    background: url('../images/Edificio.jpg') no-repeat center center/cover;
+    color: white;
+    text-align: center;
+    padding: 50px 20px;
+}
+
+#sobre-nosotros h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+#sobre-nosotros .equipo {
+    display: inline-block;
+    width: 30%;
+    margin: 10px;
+    text-align: center;
+    color: black; /* Add this line to make the text black */
+}
+
+#sobre-nosotros .equipo img {
+    width: 200px; /* Increase the width to make the image bigger */
+    height: 200px; /* Increase the height to maintain aspect ratio */
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+#sobre-nosotros .equipo img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+#sobre-nosotros .equipo p {
+    font-size: 1.2em;
+}
+
+/* Comentarios Section */
+#comentarios {
+    padding: 50px 20px;
+    text-align: center;
+    background-color: #f9f9f9; /* Add this line for shading */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Add this line for shadow */
+}
+
+#comentarios h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+#comentarios .comentario {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 40px; /* Increase margin-bottom for more space between blocks */
+    padding: 20px; /* Increase padding for a more defined block */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background-color: white; /* Add this line for a clean background */
+    border-radius: 10px; /* Add this line for rounded corners */
+    max-width: 800px; /* Add this line to restrict the width */
+    margin: 0 auto; /* Add this line to center the block */
+}
+
+#comentarios .comentario img {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    margin-right: 20px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5); /* Add shadow to the image */
+}
+
+#comentarios .texto-comentario {
+    text-align: left;
+}
+
+#comentarios .nombre {
+    font-weight: bold;
+    font-size: 1.2em;
+}
+
+/* Proceso Section */
+#proceso {
+    padding: 50px 20px;
+    text-align: center;
+}
+
+#proceso h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+#proceso ol {
+    list-style: none;
+    padding-left: 0;
+}
+
+#proceso ol li {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+    padding: 10px;
+    background-color: #f5f5f5;
+    border-left: 5px solid #666;
+}
+
+/* Precios Section */
+#precios {
+    background-color: #f5f5f5;
+    padding: 50px 20px;
+    text-align: center;
+}
+
+#precios h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+#precios .plan {
+    display: inline-block;
+    width: 40%;
+    margin: 20px;
+    padding: 40px;
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#precios .plan h3 {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+}
+
+#precios .plan p {
+    margin-bottom: 20px;
+}
+
+#precios .plan button {
+    font-size: 1em;
+}
+
+/* Contacto Section */
+#contacto {
+    padding: 50px 20px;
+    text-align: center;
+}
+
+#contacto h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+#contacto form {
+    display: inline-block;
+    text-align: left;
+}
+
+#contacto input,
+#contacto textarea {
+    display: block;
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 15px;
+    border: 1px solid #ccc;
     border-radius: 5px;
 }
-@media (max-width: 600px) {
-    #news-container {
-        flex-direction: column;
-    }
-    .news-item {
-        margin: 10px;
-    }
+
+#contacto button {
+    width: 100%;
+    padding: 10px;
+}
+
+/* Footer */
+footer {
+    background-color: #000;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+footer .logo img {
+    width: 100px;
+    margin-bottom: 10px;
+}
+
+footer nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+footer nav ul li {
+    margin: 0 10px;
+}
+
+footer nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+footer p {
+    margin-bottom: 10px;
+}
+
+footer form {
+    display: inline-block;
+}
+
+footer input {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    margin-right: 10px;
+}
+
+footer button {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #666;
+    color: white;
+    cursor: pointer;
+}
+
+footer button:hover {
+    background-color: #555;
 }

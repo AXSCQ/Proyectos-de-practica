@@ -3,22 +3,125 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Página de Noticias</title>
+    <title>Servicios de Traducción</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <h1>Noticias Recientes</h1>
-    <div id="news-container"></div>
-    <script src="js/script.js"></script>
-    <script>
-        const newsItem = document.createElement('div');
-        newsItem.innerHTML = `
-            <img src="${article.urlToImage}" alt="Imagen de noticia">
-            <h2>${article.title}</h2>
-            <p>${article.description}</p>
-            <a href="${article.url}" target="_blank">Leer más</a>
-        `;
-        document.getElementById('news-container').appendChild(newsItem);
-    </script>
+    <!-- Header -->
+    <header>
+        <img src="images/logo.Jpeg" alt="Logo de la empresa">
+        <nav>
+            <ul>
+                <li><a href="#hero">Inicio</a></li>
+                <li><a href="#servicios">Servicios</a></li>
+                <li><a href="#sobre-nosotros">Sobre Nosotros</a></li>
+                <li><a href="#precios">Precios</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+        </nav>
+        <button>Solicitar una Cotización</button>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="hero">
+        <h1>Servicios de Traducción Profesional</h1>
+        <p>Traducciones precisas y rápidas en múltiples idiomas</p>
+        <button>Solicitar una Cotización</button>
+    </section>
+
+    <!-- Servicios Section -->
+    <section id="servicios">
+        <h2>Nuestros Servicios</h2>
+        <div class="servicio">
+            <img src="/images/Servicio.jpeg" alt="Icono del servicio">
+            <h3>Servicio de Traducciones</h3>
+            <p> facilitamos procesos como los trámites del extranjero, contratos de trabajo, 
+            estudio, etc.</p>
+        </div>
+        <!-- Añadir más servicios aquí -->
+    </section>
+
+    <!-- Sobre Nosotros Section -->
+    <section id="sobre-nosotros">
+        <h2>Sobre Nosotros</h2>
+        <div class="equipo">
+            <img src="/images/Persona.jpeg" alt="Miembro del equipo">
+            <p>Carlos - coordinador</p>
+        </div>
+        <!-- Añadir más miembros del equipo aquí -->
+    </section>
+
+   <!-- Sección de Comentarios como Testimonios -->
+<section id="comentarios">
+    <h2>Comentarios de Nuestros Clientes</h2>
+    <div class="comentario">
+        <img src="/images/Diego.jpeg" alt="Persona 1">
+        <div class="texto-comentario">
+            <p class="nombre">Diego</p>
+            <p>"Este es un comentario de ejemplo que cuenta como testimonio de nuestro servicio."</p>
+        </div>
+    </div>
+    <!-- Añadir más comentarios aquí -->
+    <div class="comentario">
+        <img src="/images/Paola.jpeg" alt="Persona 2">
+        <div class="texto-comentario">
+            <p class="nombre">Paola</p>
+            <p>"La calidad del servicio fue excepcional y el tiempo de entrega fue sorprendentemente rápido."</p>
+        </div>
+    </div>
+    <div class="comentario">
+        <img src="/images/Sara.jpeg" alt="Persona 3">
+        <div class="texto-comentario">
+            <p class="nombre">Sara</p>
+            <p>"Gracias al equipo por su atención al detalle y por superar nuestras expectativas."</p>
+        </div>
+    </div>
+</section>
+
+    <!-- Proceso Section -->
+    <section id="proceso">
+        <h2>Nuestro Proceso</h2>
+        <ol>
+            <li>Recopilación de información.</li>
+            <li>Traducción y revisión.</li>
+            <li>Entrega final.</li>
+        </ol>
+    </section>
+
+    <!-- Precios Section -->
+    <section id="precios">
+        <h2>Nuestros Precios</h2>
+       <div class="plan">
+    <h3>Plan Especial</h3>
+    <p>500 hojas a tan solo $200</p>
+    <p>Este plan es ideal para proyectos grandes que requieren atención detallada y un tiempo de entrega rápido.</p>
+    <button>Seleccionar Plan</button>
+</div>
+        <!-- Añadir más planes aquí -->
+    </section>
+
+    <!-- Contacto Section -->
+    <section id="contacto">
+        <h2>Contacto</h2>
+        <form>
+            <input type="text" name="nombre" placeholder="Tu Nombre">
+            <input type="email" name="email" placeholder="Tu Email">
+            <textarea name="mensaje" rows="5" placeholder="Tu Mensaje"></textarea>
+            <button>Enviar Mensaje</button>
+        </form>
+    </section>
+
+    <!-- Footer -->
+   <footer>
+    <p>Síguenos en nuestras redes sociales:</p>
+    <nav>
+        <ul>
+            <li><a href="https://facebook.com">Facebook</a></li>
+            <li><a href="https://twitter.com">Twitter</a></li>
+            <li><a href="https://instagram.com">Instagram</a></li>
+        </ul>
+    </nav>
+    <p>&copy; 2024 Servicios de Traducción. Todos los derechos reservados.</p>
+</footer>
 </body>
 </html>
